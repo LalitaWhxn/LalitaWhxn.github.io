@@ -137,13 +137,14 @@ nav.sticky .menu-btn{
   justify-content: center;
 }
 .home .text1{
-  font-size: 25px;
+  text-shadow: 2px 2px #ffffff;
+  font-size: 30px;
   color: #0E2431;
 }
 .home .text2{
   color: #0E2431;
   font-size: 75px;
-  font-weight: 600;
+  font-weight: 500;
   margin-left: -3px;
 }
 .home .text3{
@@ -165,17 +166,14 @@ nav.sticky .menu-btn{
   border-radius: 6px;
   font-size: 25px;
   font-weight: 400;
-  background: blueviolet;
-  color: #fff;
+  border-color: white;
+  background-color: white;
+  color: white;
   cursor: pointer;
   border: 2px solid transparent;
   transition: all 0.4s ease;
 }
-.home .button button:hover{
-  border-color: blueviolet;
-  background-color: #fff;
-  color: blueviolet;
-}
+
 
 /* About Section Styling */
 /* Those Elements Where We Have Apply Same CSS,
@@ -231,7 +229,12 @@ section .title span::after{
   border-radius: 12px;
 }
 .about-details .right{
-  width: 55%;
+  width: 60%;
+}
+
+.textt {
+  font-size: 18px;
+  font-family: 'Noto Sans Thai', sans-serif;
 }
 section  .topic{
   color: #0E2431;
@@ -266,52 +269,100 @@ section .button button:hover{
 
 
 /* My Services CSS */
-.services .boxes{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  box-sizing: border-box;
-  margin: 0px -5px;
+.row {
+	margin: 0;
 }
-.services .boxes .box{
-  margin: 20px 0;
-  width: calc(100% / 3 - 20px);
-  text-align: center;
-  border-radius: 15px;
-  padding: 30px 10px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
-  cursor: default;
-  transition: all 0.4s ease;
+.container {
 }
-.services .boxes .box:hover{
-  background: blueviolet;
-  color: #fff;
+
+.test_box {
+	padding: 0;
 }
-.services .boxes .box .icon{
-  height: 50px;
-  width: 50px;
-  background: blueviolet;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 50px;
-  font-size: 18px;
-  color: #fff;
-  margin: 0 auto 10px auto;
-  transition: all 0.4s ease;
+.test_box .inner {
+	background: #333;
+	display: block;
+	margin: 10px;
+	overflow: hidden;
 }
-.boxes .box:hover .icon{
-  background-color: #fff;
-  color: blueviolet;
+.test_box .inner .test_click {
+	-webkit-align-content: center;
+	-ms-flex-line-pack: center;
+	align-content: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	background-color: rgba(0,0,0,.1);
+	color: #fff;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-wrap: wrap;
+	height: 300px;
+	mix-blend-mode: normal;
+	text-align: center;
+	text-decoration: none;
+	-webkit-transition: all 300ms ease;
+	transition: all 300ms ease;
 }
-.services .boxes .box:hover .topic,
-.services .boxes .box:hover p{
-  color: #0E2431;
-  transition: all 0.4s ease;
+.test_box .inner .test_click:hover {
+	background-color: rgba(0,100,255,.5); 
+	mix-blend-mode: hard-light;
 }
-.services .boxes .box:hover .topic,
-.services .boxes .box:hover p{
-  color: #fff;
+.flex_this {
+	-webkit-align-content: center;
+	-ms-flex-line-pack: center;
+	align-content: center;
+	display: inherit;
+	flex-wrap: inherit;
+	height: auto;
+	margin: 0;
+	padding: 10px;
+	-webkit-transition: all 300ms ease;
+	transition: all 300ms ease;
+	width: 100%;
+
+}
+.test_box .inner .test_click:hover .flex_this {
+	margin-top: -5px;
+}
+
+.test_title {
+	display: block;
+	font-weight: 700;
+	margin: 0 0 20px;
+	width: 100%;
+  color: #ffffff;
+  text-shadow: 3px 3px #000000;
+}
+.test_link {
+	border: 2px solid #ffffff;
+	display: inline-block;
+	font-size: .8em;
+	font-weight: 700;
+	letter-spacing: .1em;
+	margin: 0 auto;
+	padding: 10px 30px;
+	text-transform: uppercase;
+  text-shadow: 2px 2px #000000;
+}
+
+.box-01 .inner {
+	background-image: url('Port.PNG');
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.box-02 .inner {
+	background-image: url('REG.PNG');
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.box-03 .inner {
+	background-image: url('2565.PNG');
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 /* Contact Me CSS */
 .contact{
@@ -384,11 +435,36 @@ footer .text span a:hover{
     margin: 20px 0;
     width: calc(100% / 2 - 20px);
   }
+
+  
 }
 @media (max-width: 900px) {
   .about .left img{
     height: 350px;
     width: 350px;
+  }
+  .home .text1{
+    text-shadow: 2px 2px #000000;
+    margin-left: 80px;
+    margin-bottom: 80px;
+    font-size: 30px;
+    color: #ffffff;
+  }
+  .home .text2{
+    text-shadow: 2px 2px #000000;
+    -webkit-text-stroke: 2px rgb(208, 34, 227);
+    padding-top: 20px;
+    display: flex;
+    color: #ffffff;
+    font-size: 70px;
+    font-weight: 500;
+    margin-left: -40px;
+  }
+  .home .text3{
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    font-size: 40px;
+    margin: 5px 0;
+    color: blueviolet;
   }
 }
 
@@ -451,7 +527,7 @@ footer .text span a:hover{
   }
   .contact .text{
     width: 100%;
-}
+ }
 }
 
 @media (max-width: 500px){
@@ -516,7 +592,7 @@ p {
   font-size: 25PX;
   box-sizing: border-box;
   width: 20%;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding: 0px 10px;
   color: #242424;
   font-weight: 600;
